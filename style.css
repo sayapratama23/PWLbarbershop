@@ -1,0 +1,11 @@
+/*ini style slider*/
+
+.carousel-item {
+    height: 670px;
+}
+.carousel-item {
+    margin-top: -120px;
+}
+.carousel-item .display-4 {
+    margin-top: -440px;
+}
