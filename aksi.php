@@ -30,14 +30,16 @@ if($cek > 0){
 		// berfungsi membuat session
 		$_SESSION['nama'] = $data['nama'];
 		$_SESSION['level'] = "guest";
+		
 		// berfungsi mengalihkan ke halaman moderator
 		header("location:guest/index.php");
 
 	}else{
 		// berfungsi mengalihkan alihkan ke halaman login kembali
-		header("location:index.php?alert=gagal");
+		header("location:login.php?alert=gagal");
+		
 	}	
 }else{
-	header("location:index.php?alert=gagal");
+	header("location:login.php?alert=gagal");
 }
 ?>
