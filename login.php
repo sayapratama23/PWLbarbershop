@@ -1,3 +1,7 @@
+<?php
+require_once('config.php');
+require_once('core/controller.Class.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,6 +155,7 @@
 </nav>
 
 <section class="login d-flex">
+	
 		<div class="login-left w-50 h-100">
 			<div class="row justify-content-center align-items-center h-100">
 				<div class="col-6">
@@ -177,7 +182,7 @@
 			</div>
 	  		
 			<td><input type="submit" class="btn btn-primary" value="Login"></td>
-			<button class="signin-google">
+			<button onclick="window.location = '<?php echo $login_url; ?>'" type="button" class="signin-google">
 						<img src="img/icon.png" alt="">
 						Sign in With Google
 					</button>
