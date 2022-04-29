@@ -330,13 +330,13 @@ if($_SESSION['level']==""){
                         <a href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Kelola Data Pelanggan</a>
+                                <a href="pelanggan.php">Kelola Data Pelanggan</a>
                             </li>
                             <li>
-                                <a href="#">Kelola Data Transaksi</a>
+                                <a href="transaksi.php">Kelola Data Transaksi</a>
                             </li>
                             <li>
-                                <a href="#">Kelola Data Karyawan</a>
+                                <a href="karyawan.php">Kelola Data Karyawan</a>
                                     <li>                                
                                 </ul>
 
