@@ -319,11 +319,11 @@ if($_SESSION['level']==""){
                         <a class="active-menu" href="galeri.php"><i class="fa fa-picture-o"></i> Galeri</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-money"></i> Pendapatan</a>
+                        <a href="pendapatan.php"><i class="fa fa-money"></i> Pendapatan</a>
                     </li>
                     
                     <li>
-                        <a href="table.html"><i class="fa fa-table"></i> List Pelanggan</a>
+                        <a href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
                     </li>
               
                     <li>

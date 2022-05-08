@@ -15,7 +15,7 @@ if($_SESSION['level']==""){
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelola data</title>
+    <title>List Pelanggan</title>
     <!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
@@ -181,19 +181,20 @@ if($_SESSION['level']==""){
                     <li>
                         <a href="index.php"><i class="fa fa-dashboard"></i> Beranda</a>
                     </li>
-					<!-- <li>
+					          <li>
                         <a href="galeri.php"><i class="fa fa-picture-o"></i> Galeri</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-money"></i> Pendapatan</a>
+                        <a href="pendapatan.php"><i class="fa fa-money"></i> Pendapatan</a>
                     </li>
                     
                     <li>
-                        <a href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
+                        <a class="active-menu" href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
+                        
                     </li>
-               -->
+              
                     <li>
-                        <a class="active-menu" href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="pelanggan.php">Kelola Data Pelanggan</a>
@@ -222,35 +223,53 @@ if($_SESSION['level']==""){
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Kelola Data Pelanggan <small>Mozalucky Barbershop</small>
+                            List Pelanggan <small>Mozalucky Barbershop</small>
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
 
                     <div class="col-md-9 col-sm-12 col-xs-12">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                List Pelanggan
+                            <a href="form-daftar.php" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Tambah Data</a>
                             </div> 
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
-                                            <!-- <tr>
+                                            <tr>
                                             <th>Nama</th>
                                             <th>Handphone</th>
                                             <th>Alamat</th>
                                             <th>Tagihan</th>
                                             <th>Aksi</th>
-                                            </tr> -->
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                        <ul>
-                                            <li><a href="form-daftar.php">Input data</a></li>
-                                            <li><a href="list-pelanggan.php">List pelanggan</a></li>
-                                        </ul>
+
+                                        <?php
+                                            $sql = "SELECT * FROM pelanggan";
+                                            $query = mysqli_query($db, $sql);
+
+                                            while($pelanggan = mysqli_fetch_array($query)){
+                                                echo "<tr>";
+
+                                                
+                                                echo "<td>".$pelanggan['nama']."</td>";
+                                                echo "<td>".$pelanggan['hp']."</td>";
+                                                echo "<td>".$pelanggan['alamat']."</td>";
+                                                echo "<td>".$pelanggan['tagihan']."</td>";
+                                                
+
+                                                echo "<td>";
+                                                echo "<a href='form-edit.php?id=".$pelanggan['id']."'>Edit</a> | ";
+                                                echo "<a href='form-hapus.php?id=".$pelanggan['id']."'>Hapus</a>";
+                                                echo "</td>";
+
+                                                echo "</tr>";
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

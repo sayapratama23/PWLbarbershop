@@ -26,10 +26,10 @@ if($cek > 0){
 		//berfungsi mengalihkan ke halaman admin
 		header("location:admin/index.php");
 	// berfungsi mengecek jika user login sebagai moderator
-	}else if($data['level']=="guest"){
+	}else if($data['level']=="karyawan"){
 		// berfungsi membuat session
 		$_SESSION['nama'] = $data['nama'];
-		$_SESSION['level'] = "guest";
+		$_SESSION['level'] = "karyawan";
 		
 		// berfungsi mengalihkan ke halaman moderator
 		header("location:guest/index.php");

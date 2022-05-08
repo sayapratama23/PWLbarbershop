@@ -15,8 +15,9 @@ if($_SESSION['level']==""){
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelola data</title>
+    <title>Form input</title>
     <!-- Bootstrap Styles-->
+    
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -181,19 +182,20 @@ if($_SESSION['level']==""){
                     <li>
                         <a href="index.php"><i class="fa fa-dashboard"></i> Beranda</a>
                     </li>
-					<!-- <li>
+					          <li>
                         <a href="galeri.php"><i class="fa fa-picture-o"></i> Galeri</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-money"></i> Pendapatan</a>
+                        <a href="pendapatan.php"><i class="fa fa-money"></i> Pendapatan</a>
                     </li>
                     
                     <li>
                         <a href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
+                        
                     </li>
-               -->
+              
                     <li>
-                        <a class="active-menu" href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
+                        <a class="active-menu"  href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="pelanggan.php">Kelola Data Pelanggan</a>
@@ -222,35 +224,69 @@ if($_SESSION['level']==""){
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Kelola Data Pelanggan <small>Mozalucky Barbershop</small>
+                            Input Data <small>Mozalucky Barbershop</small>
                         </h1>
                     </div>
                 </div>
-                <!-- /. ROW  -->
 
                     <div class="col-md-9 col-sm-12 col-xs-12">
 
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                List Pelanggan
-                            </div> 
+                            <!--   -->
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                            <!-- <tr>
-                                            <th>Nama</th>
-                                            <th>Handphone</th>
-                                            <th>Alamat</th>
-                                            <th>Tagihan</th>
-                                            <th>Aksi</th>
-                                            </tr> -->
-                                        </thead>
-                                        <tbody>
-                                        <ul>
-                                            <li><a href="form-daftar.php">Input data</a></li>
-                                            <li><a href="list-pelanggan.php">List pelanggan</a></li>
-                                        </ul>
+
+                                    <form action="proses-pendaftaran.php" method="POST">
+                                        
+                                    <div class="form-group">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" name="nama" class="form-control" placeholder="Masukkan nama">
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <label for="hp">Handphone</label>
+                                        <input type="text" name="hp" class="form-control" placeholder="Masukkan no hp">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat</label>
+                                        <textarea class="form-control" name="alamat" rows="3" placeholder="Masukkan alamat"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tagihan">Tagihan</label>
+                                        <input type="tagihan" name="tagihan" class="form-control" placeholder="Masukkan tagihan">
+                                    </div>
+                                    <button type="submit" name="daftar" class="btn btn-primary">Submit</button>
+                                    <!-- <input type="submit" value="Daftar" name="daftar" /> -->
+                                </form>
+                                            <!-- <fieldset>
+
+                                            <p>
+                                                <label for="nama">Nama: </label>
+                                                <input type="text" name="nama" placeholder="Masukkan Nama" />
+                                            </p>
+                                            <p>
+                                                <label for="hp">Handphone: </label>
+                                                <input type="text" name="hp" placeholder="Nomor Handphone" />
+                                            </p>
+                                            <p>
+                                                <label for="alamat">Alamat: </label>
+                                                <textarea name="alamat"></textarea>
+                                            </p>
+                                            <p>
+                                                <label for="tagihan">Tagihan: </label>
+                                                <input type="text" name="tagihan" placeholder="Masukkan Tagihan" />
+                                            </p>
+                                            <p>
+                                                <input type="submit" value="Daftar" name="daftar" />
+                                            </p>
+
+                                            </fieldset>
+
+                                            </form> -->
+
                                         </tbody>
                                     </table>
                                 </div>

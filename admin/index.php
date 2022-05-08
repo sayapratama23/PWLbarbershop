@@ -1,3 +1,4 @@
+<?php include("koneksi.php"); ?>
 <?php 
 session_start();
 //berfungsi mengecek apakah user sudah login atau belum
@@ -25,6 +26,8 @@ if($_SESSION['level']==""){
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"></script>
 </head>
 
 <body>
@@ -182,24 +185,24 @@ if($_SESSION['level']==""){
                         <a href="galeri.php"><i class="fa fa-picture-o"></i> Galeri</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-money"></i> Pendapatan</a>
+                        <a href="pendapatan.php"><i class="fa fa-money"></i> Pendapatan</a>
                     </li>
                     
                     <li>
-                        <a href="table.html"><i class="fa fa-table"></i> List Pelanggan</a>
+                        <a href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
                     </li>
               
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Kelola Data Pelanggan</a>
+                                <a href="pelanggan.php">Kelola Data Pelanggan</a>
                             </li>
                             <li>
-                                <a href="#">Kelola Data Transaksi</a>
+                                <a href="transaksi.php">Kelola Data Transaksi</a>
                             </li>
                             <li>
-                                <a href="#">Kelola Data Karyawan</a>
+                                <a href="karyawan.php">Kelola Data Karyawan</a>
                                     <li>                                
                                 </ul>
 
@@ -262,104 +265,52 @@ if($_SESSION['level']==""){
 
                             </div>
                         </div>
+                        
                     </div>
                 </div>
-
-
-                <div class="row">
-
 
                     <div class="col-md-9 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Bar Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-bar-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Donut Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /. ROW  -->
-
-                <div class="row">
-                        
-                                    
-
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Responsive Table Example
+                                List Pelanggan
                             </div> 
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>S No.</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>User Name</th>
-                                                <th>Email ID.</th>
+                                            <th>Nama</th>
+                                            <th>Handphone</th>
+                                            <th>Alamat</th>
+                                            <th>Tagihan</th>
+                                            <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>John15482</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Kimsila</td>
-                                                <td>Marriye</td>
-                                                <td>Kim1425</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Rossye</td>
-                                                <td>Nermal</td>
-                                                <td>Rossy1245</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Richard</td>
-                                                <td>Orieal</td>
-                                                <td>Rich5685</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Jacob</td>
-                                                <td>Hielsar</td>
-                                                <td>Jac4587</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Wrapel</td>
-                                                <td>Dere</td>
-                                                <td>Wrap4585</td>
-                                                <td>name@site.com</td>
-                                            </tr>
 
+                                        <?php
+                                            $sql = "SELECT * FROM pelanggan";
+                                            $query = mysqli_query($db, $sql);
+
+                                            while($pelanggan = mysqli_fetch_array($query)){
+                                                echo "<tr>";
+
+                                                
+                                                echo "<td>".$pelanggan['nama']."</td>";
+                                                echo "<td>".$pelanggan['hp']."</td>";
+                                                echo "<td>".$pelanggan['alamat']."</td>";
+                                                echo "<td>".$pelanggan['tagihan']."</td>";
+                                                
+
+                                                echo "<td>";
+                                                echo "<a href='form-edit.php?id=".$pelanggan['id']."'>Edit</a> | ";
+                                                echo "<a href='form-hapus.php?id=".$pelanggan['id']."'>Hapus</a>";
+                                                echo "</td>";
+
+                                                echo "</tr>";
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -369,7 +320,7 @@ if($_SESSION['level']==""){
                     </div>
                 </div>
                 <!-- /. ROW  -->
-				<footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez</a></p></footer>
+				
             </div>
             <!-- /. PAGE INNER  -->
         </div>
