@@ -259,12 +259,10 @@ flex: 2 0px;
                   
                   <div class="col-12">
             <button style="border-radius : 5px;width : 100%;text-align : left;margin-top : 25px;white-space: normal;" class="btn btn-primary py-3 px-5 collapsed" data-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample7">
-              Apa saja keuntungan menjadi member di Mozalucky Barbershop?            </button>
+              Apa keuntungan menjadi member di Mozalucky Barbershop?            </button>
             <div class="collapse multi-collapse" id="multiCollapseExample7">
               <div class="card card-body" style="margin-top: 20px;background-color : #181818; color : white;">
-                <p>Keuntungan membership untuk cabang reguler : mendapatkan 60k point diawal pembuatan member, mendapatkan 30k point ketika ulang tahun, 10% cashback services &amp; 5% cashback products.</p>
-
-<p>Keuntungan membership untuk cabang premiere : mendapatkan gratis cukur tak terbatas selama 1 tahun, 10% cashback services &amp; 5% cashback products.</p>
+                <p>Keuntungan Membership : Mendapatkan gratis cukur 1 kali dan 10% cashback services &amp; 5% cashback products.</p>
               </div>
             </div>
           </div>
@@ -273,7 +271,7 @@ flex: 2 0px;
               Bagaimana caranya untuk booking?            </button>
             <div class="collapse multi-collapse" id="multiCollapseExample8">
               <div class="card card-body" style="margin-top: 20px;background-color : #181818; color : white;">
-                <p>Silahkan menghubungi nomor cabang yang ingin didatangi atau silahkan menghubungi customer care kami di<a href="https://api.whatsapp.com/send?phone=6282230892356"> 082230892356</a></p>              </div>
+                <p>Silahkan menghubungi customer care kami di<a href="https://api.whatsapp.com/send?phone=6282230892356"> 082230892356</a></p>              </div>
             </div>
           </div>                 
                   <div class="col-12">

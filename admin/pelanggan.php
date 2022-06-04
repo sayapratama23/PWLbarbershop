@@ -181,7 +181,7 @@ if($_SESSION['level']==""){
                     <li>
                         <a href="index.php"><i class="fa fa-dashboard"></i> Beranda</a>
                     </li>
-					<!-- <li>
+					 <li>
                         <a href="galeri.php"><i class="fa fa-picture-o"></i> Galeri</a>
                     </li>
                     <li>
@@ -191,7 +191,7 @@ if($_SESSION['level']==""){
                     <li>
                         <a href="list-pelanggan.php"><i class="fa fa-table"></i> List Pelanggan</a>
                     </li>
-               -->
+              
                     <li>
                         <a class="active-menu" href="#"><i class="fa fa-sitemap"></i> Kelola Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

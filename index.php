@@ -51,6 +51,10 @@
             font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;          
         }
 
+        .btn-warning{
+
+        }
+
 
     *, *:before, *:after {
 box-sizing: border-box;

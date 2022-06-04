@@ -23,19 +23,21 @@ if($cek > 0){
 		// berfungsi membuat session
 		$_SESSION['nama'] =  $data['nama'];
 		$_SESSION['level'] = "admin";
+		
 		//berfungsi mengalihkan ke halaman admin
 		header("location:admin/index.php");
-	// berfungsi mengecek jika user login sebagai moderator
-	}else if($data['level']=="karyawan"){
+	// berfungsi mengecek jika user login sebagai karyawan
+	}else if($data['level']=="member"){
 		// berfungsi membuat session
 		$_SESSION['nama'] = $data['nama'];
-		$_SESSION['level'] = "karyawan";
+		$_SESSION['level'] = "member";
+		$_SESSION['email'] = $data['email'];
 		
 		// berfungsi mengalihkan ke halaman moderator
-		header("location:guest/index.php");
+		header("location:member.php");
 
 	}else{
-		// berfungsi mengalihkan alihkan ke halaman login kembali
+		// berfungsi mengalihkan  ke halaman login kembali
 		header("location:login.php?alert=gagal");
 		
 	}	

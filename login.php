@@ -1,6 +1,10 @@
 <?php
-require_once('config.php');
-require_once('core/controller.Class.php');
+session_start(); // Start session nya
+// Kita cek apakah user sudah login atau belum
+// Cek nya dengan cara cek apakah terdapat session username atau tidak
+if(isset($_SESSION['username'])){ // Jika session username ada berarti dia sudah login
+  header('location: member/member.php'); // Kita Redirect ke halaman welcome.php
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -95,16 +99,19 @@ require_once('core/controller.Class.php');
 		border: none;
 		font-family: 'Poppins', sans-serif;
 		
+		
 		}
-		.signin-google {
+		.btn-danger {
 		width: 100%;
 		height: 42px;
-		background: #FFFFFF;
+		background: white;
 		border: 1px solid #BCBCBC;
 		box-sizing: border-box;
 		border-radius: 8px;
 		margin: 10px 0 20px 0;
 		font-family: 'Poppins', sans-serif;
+		color:black;
+		
 	  }
 	  .span {
 		font-style: normal;
@@ -124,35 +131,6 @@ require_once('core/controller.Class.php');
 	  
 </style>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="https://www.instagram.com/mosalaki_barber/">
-        <img src="image/logo.png" width="48">  MOZALUCKY BARBERSHOP
-    </a>
-        
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-3">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link" href="service.php">Service</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link" href="faq.php">FAQ</a>
-        </li>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <section class="login d-flex">
 	
@@ -182,12 +160,14 @@ require_once('core/controller.Class.php');
 			</div>
 	  		
 			<td><input type="submit" class="btn btn-primary" value="Login"></td>
-			<button onclick="window.location = '<?php echo $login_url; ?>'" type="button" class="signin-google">
-						<img src="img/icon.png" alt="">
-						Sign in With Google
-					</button>
+            <div class="text-center">
+              <a href="google.php" class="btn btn-danger">
+				  <img src="img/icon.png" alt="">
+				  Signin With Google</a>
+            </div>
+			
 						<div class="text-center">
-						<span class="d-inline">Don’t have an account?<a href="daftar.php" class="d-inline text-decoration-none"> <strong>Sign up for free</strong>  </a>
+						<span class="d-inline">kembali ke<a href="index.php" class="d-inline text-decoration-none"> <strong>Beranda</strong>  </a>
 						</span>
 						<?php
 	if(isset($_GET['alert'])){
@@ -210,25 +190,25 @@ require_once('core/controller.Class.php');
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-				<img src="img/3.jpg" class="d-block w-100" alt="...">
+				<img src="img/3.jpg" class="d-block w-100 img-fluid" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					
 				</div>
 				</div>
 				<div class="carousel-item">
-				<img src="img/4.jpg" class="d-block w-100" alt="...">
+				<img src="img/4.jpg" class="d-block w-100 img-fluid" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					
 				</div>
 				</div>
 				<div class="carousel-item">
-				<img src="img/5.jpg" class="d-block w-100" alt="...">
+				<img src="img/5.jpg" class="d-block w-100 img-fluid" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					
 				</div>
 				</div>
 				<div class="carousel-item">
-				<img src="img/6.jpg" class="d-block w-100" alt="...">
+				<img src="img/6.jpg" class="d-block w-100 img-fluid" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					
 				</div>

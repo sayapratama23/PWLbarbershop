@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,58 +8,59 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>About</title>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-
-    <script>
-        // fungsi initialize untuk mempersiapkan peta
-        function initialize() {
-        var propertiPeta = {
-            center:new google.maps.LatLng(-8.5830695,116.3202515),
-            zoom:9,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        
-        var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
-        }
-
-        // event jendela di-load  
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    <title>Welcome to Mozalucky Barbershop</title>
   </head>
     <style>
-        body{
-          height: 90vh;
-          background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('admin/galeri/image/full/an.jpg');
-          background-position: center top;
-          background-size: cover;
+        .banner{
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('image/gb2.jpg');
+            background-size: cover;
+            background-position: center;
+            
         }
-        /* .container {
-          
-          padding-top: 25px;
-          padding-bottom: 30px;
-          width : 700px;
-          font-family: "Courier New", Courier, monospace;
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          margin-top: 20px;
-          margin-bottom: 25px;
-          
-          
-        } */
+        h1 {
+          font-size: 40px;
+          text-shadow: 1px 1px 1px;
+          margin-top: -15px;
+          margin-bottom: 10px;
+        }
 
-        /* .container .card {
-        position: relative;
-      } */
+        h6 {
+          border: solid;
+          color: black;
+          background-color: white;
+          margin: auto;
+          justify-content: center;
+          font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+        }
 
-      body {
+        .banner-content{
+            height: 100%;
+            border: solid;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;          
+        }
+
+        .btn-warning{
+
+        }
+
+
+    *, *:before, *:after {
+box-sizing: border-box;
+}
+
+body {
 margin: 0;
 display: grid;
 }
@@ -156,23 +158,19 @@ flex: 2 0px;
 }
 }
 
-      
-
-      
     </style>
 
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="https://www.instagram.com/mosalaki_barber/">
         <img src="image/logo.png" width="48">  MOZALUCKY BARBERSHOP
     </a>
         
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item mx-3">
@@ -190,15 +188,17 @@ flex: 2 0px;
           </a>
         </li>
       </ul>
-      <form class="d-flex">       
+      <form class="d-flex">
+        
         <a class="btn btn-outline-warning" href="login.php" role="button">Login</a>
       </form>
     </div>
   </div>
 </nav>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.227765406002!2d112.60610471432845!3d-7.9753959817163675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78829a80cd3feb%3A0x88673c2e07a69788!2sJl.%20Pisang%20Candi%20Barat%20No.73%2C%20Pisang%20Candi%2C%20Kec.%20Sukun%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065146!5e0!3m2!1sid!2sid!4v1649743057096!5m2!1sid!2sid" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.227765406002!2d112.60610471432845!3d-7.9753959817163675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78829a80cd3feb%3A0x88673c2e07a69788!2sJl.%20Pisang%20Candi%20Barat%20No.73%2C%20Pisang%20Candi%2C%20Kec.%20Sukun%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065146!5e0!3m2!1sid!2sid!4v1649743057096!5m2!1sid!2sid" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <footer class="footer">
 <div class="l-footer">
       <h1>

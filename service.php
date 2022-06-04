@@ -179,7 +179,7 @@ flex: 2 0px;
                 </li>
             </ul>
             <form class="d-flex pt-2"> 
-                <a class="btn btn-outline-warning" href="index.php" role="button">Login</a>
+                <a class="btn btn-outline-warning" href="login.php" role="button">Login</a>
             </form>
             </div>
         </div>
@@ -265,7 +265,7 @@ flex: 2 0px;
 <table class="table table-bordered table-striped">
  
 	
- 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.227765406002!2d112.60610471432845!3d-7.9753959817163675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78829a80cd3feb%3A0x88673c2e07a69788!2sJl.%20Pisang%20Candi%20Barat%20No.73%2C%20Pisang%20Candi%2C%20Kec.%20Sukun%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065146!5e0!3m2!1sid!2sid!4v1649743057096!5m2!1sid!2sid" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	<script src="assets/js/jquery.js"></script> 
 	<script src="assets/js/popper.js"></script> 
 	<script src="assets/js/bootstrap.js"></script>
@@ -307,10 +307,12 @@ flex: 2 0px;
       </ul>
       </li>
       </ul>
+      
       <div class="b-footer">
       <p>
       All rights reserved by ©admin MozaluckyBarbershop </p>
       </div>
+      
 </footer>
 </body> 
 </html>
