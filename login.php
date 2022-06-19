@@ -196,7 +196,7 @@ if(isset($_SESSION['username'])){ // Jika session username ada berarti dia sudah
 				</div>
 				</div>
 				<div class="carousel-item">
-				<img src="img/4.jpg" class="d-block w-100 img-fluid" alt="...">
+				<img src="img/1.jpeg" class="d-block w-100 img-fluid" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					
 				</div>

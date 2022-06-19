@@ -224,11 +224,6 @@ if($_SESSION['level']==""){
                 </div>
               </a>
             </li>
-            <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0">
-                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -247,10 +242,10 @@ if($_SESSION['level']==""){
                   </p>
                 </div>
                 <div class="col-6 text-end">
-                    <a class="btn bg-gradient-dark mb-0" href="form-daftar.php" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Data</a>
+                    <a class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" href="form-daftar.php"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Data</a>
                 </div>
                 
-                 <!-- Button trigger modal -->
+<!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button> -->
@@ -264,35 +259,28 @@ if($_SESSION['level']==""){
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="proses-pendaftaran.php" method="POST">
-                                        
-        <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" name="nama" class="form-control" placeholder="Masukkan nama">
-        </div>
-                                    
-        <div class="form-group">
-            <label for="hp">Handphone</label>
-            <input type="text" name="hp" class="form-control" placeholder="Masukkan no hp">
-        </div>
-    
-        <div class="form-group">
-            <label for="alamat">Alamat</label>
-            <textarea class="form-control" name="alamat" rows="3" placeholder="Masukkan alamat"></textarea>
-        </div>
-    
-        <div class="form-group">
-            <label for="tagihan">Tagihan</label>
-            <input type="tagihan" name="tagihan" class="form-control" placeholder="Masukkan tagihan">
-        </div>
-            <button type="submit" name="daftar" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                                    
+      <form action="proses-edit.php" method="POST">
+          <input type="hidden" name="id" value="<?php echo $pelanggan['id'] ?>" />
+              <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" name="nama" class="form-control" placeholder="Masukkan nama" value="<?php echo $pelanggan['nama'] ?>">
+              </div>
+              <div class="form-group">
+                  <label for="hp">Handphone</label>
+                  <input type="text" name="hp" class="form-control" placeholder="Masukkan no anda" value="<?php echo $pelanggan['hp'] ?>">
+              </div>
+              <div class="form-group">
+                  <label for="alamat">Alamat</label>
+                  <input type="text" name="alamat" class="form-control" placeholder="Masukkan alamat" value="<?php echo $pelanggan['hp'] ?>">
+              </div>
+              <div class="form-group">
+                  <label for="tagihan">Tagihan</label>
+                  <input type="text" name="tagihan" class="form-control" placeholder="Masukkan tagihan" value="<?php echo $pelanggan['hp'] ?>">
+              </div>
+              <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                                   
       </form>
       </div>
-      <!-- <div class="modal-footer">
-        
-        <button type="submit" name="daftar" class="btn btn-primary">Save changes</button>
-      </div> -->
     </div>
   </div>
 </div>
@@ -316,6 +304,7 @@ if($_SESSION['level']==""){
                     <?php
                         $sql = "SELECT * FROM pelanggan";
                         $query = mysqli_query($db, $sql);
+                        
 
                         while($pelanggan = mysqli_fetch_array($query)){
                             echo "<tr>";

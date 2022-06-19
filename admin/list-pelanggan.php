@@ -1,4 +1,5 @@
 <?php include("koneksi.php"); ?>
+
 <?php 
 session_start();
 //berfungsi mengecek apakah user sudah login atau belum
@@ -84,27 +85,7 @@ if($_SESSION['level']==""){
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">List Pelanggan</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="form-daftar.php">
-            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-              <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>office</title>
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                    <g transform="translate(1716.000000, 291.000000)">
-                      <g id="office" transform="translate(153.000000, 2.000000)">
-                        <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
-                        <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <span class="nav-link-text ms-1">Kelola Data</span>
+            <span class="nav-link-text ms-1">Pelanggan</span>
           </a>
         </li>
        
@@ -231,53 +212,39 @@ if($_SESSION['level']==""){
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Input Data Pelanggan</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          <form action="proses-edit.php" method="POST">
 
-<fieldset>
-<div class="form-group">
-    <label for="nama">Nama</label>
-    <input type="text" name="nama" class="form-control" placeholder="Masukkan nama" value="<?php echo $pelanggan['nama'] ?>">
-</div>
-    <input type="hidden" name="id" value="<?php echo $pelanggan['id'] ?>" />
-
-<p>
-    <label for="nama">Nama: </label>
-    <input type="text" name="nama" placeholder="Masukkan nama" value="<?php echo $pelanggan['nama'] ?>" />
-</p>
-<p>
-    <label for="hp">Handphone: </label>
-    <input type="text" name="hp" placeholder="Masukkan no handphone" value="<?php echo $pelanggan['hp'] ?>" />
-</p>
-
-<p>
-    <label for="alamat">Alamat: </label>
-    <textarea name="alamat"><?php echo $pelanggan['alamat'] ?></textarea>
-</p>
-
-<p>
-    <label for="tagihan">Tagihan: </label>
-    <input type="text" name="tagihan" placeholder="Masukkan tagihan" value="<?php echo $pelanggan['tagihan'] ?>" />
-</p>
-<p>
-    <input type="submit" value="Simpan" name="simpan" />
-</p>
-
-</fieldset>
-
-
-</form>
+          <form action="proses-pendaftaran.php" method="POST">
+          
+              <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" name="nama" class="form-control" placeholder="Masukkan nama">
+              </div>
+              <div class="form-group">
+                  <label for="hp">Handphone</label>
+                  <input type="text" name="hp" class="form-control" placeholder="Masukkan no anda">
+              </div>
+              <div class="form-group">
+                  <label for="alamat">Alamat</label>
+                  <input type="text" name="alamat" class="form-control" placeholder="Masukkan alamat">
+              </div>
+              <div class="form-group">
+                  <label for="tagihan">Tagihan</label>
+                  <input type="text" name="tagihan" class="form-control" placeholder="Masukkan tagihan">
+              </div>
+              <button type="submit" name="daftar" class="btn btn-primary">Simpan</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </form>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            
           </div>
         </div>
       </div>
@@ -294,9 +261,9 @@ if($_SESSION['level']==""){
                     <span class="font-weight-bold ms-1">Customers</span> this month
                   </p>
                 </div>
-                <!-- <div class="col-6 text-end">
-                    <a class="btn bg-gradient-dark mb-0" href="form-daftar.php"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Data</a>
-                </div> -->
+                <div class="col-6 text-end">
+                    <a class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" href="form-daftar.php"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah Data</a>
+                </div>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -316,6 +283,7 @@ if($_SESSION['level']==""){
                     <?php
                         $sql = "SELECT * FROM pelanggan";
                         $query = mysqli_query($db, $sql);
+                        
 
                         while($pelanggan = mysqli_fetch_array($query)){
                             echo "<tr>";
@@ -325,7 +293,7 @@ if($_SESSION['level']==""){
                                 echo "<td class='text-center'>".$pelanggan['tagihan']."</td>";
                                                 
                                 echo "<td class='text-center'>";
-                                echo "<a class='btn bg-primary mb-0' data-bs-toggle='modal' data-bs-target='#exampleModal' href='form-edit.php?id=".$pelanggan['id']."'><i class='fas fa-pen text-white'></a>";
+                                echo "<a class='btn bg-primary mb-0' href='form-edit.php?id=".$pelanggan['id']."'><i class='fas fa-pen text-white'></a>";
                                 echo "<a class='btn bg-dark mb-0' href='form-hapus.php?id=".$pelanggan['id']."'><i class='fas fa-trash text-white'></a>";
                                 echo "</td>";
 
