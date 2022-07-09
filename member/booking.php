@@ -23,10 +23,11 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Josefin+Sans:wght@300&display=swap');
@@ -80,25 +81,23 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-laptop me-2"></i>Layanan Anda</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="membership.php" class="dropdown-item ms-4">Membership</a>
+                            
                             <a href="booking.php" class="dropdown-item ms-4">Booking</a>
                         </div>
                     </div>
-                    <a href="tagihan.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Tagihan</a>
+                    <!-- <a href="tagihan.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Tagihan</a> -->
+                    <a href="images.php" class="nav-item nav-link"><i class="bi bi-images me-2"></i>Galeri</a>
                     <a href="store.php" class="nav-item nav-link"><i class="bi bi-shop me-2"></i></i>Mozalucky store</a>
                 </div>
             </nav>
         </div>
-        <!-- Sidebar End -->
+        <!-- Sideba End -->
 
 
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
-                </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>            
@@ -112,8 +111,6 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item"><h5>My Profile</h5></a>
-                            <a href="#" class="dropdown-item"><h5>Settings</h5></a>
                             <a href="logout.php" class="dropdown-item"><h5>Log Out</h5></a>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-
+<?php include("koneksi.php"); ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,7 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">  
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">  
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
     <title>Welcome to Mozalucky Barbershop</title>
   </head>
     <style>
@@ -51,12 +54,9 @@
             font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;          
         }
 
-        .btn-warning{
+       
 
-        }
-
-
-    *, *:before, *:after {
+*, *:before, *:after {
 box-sizing: border-box;
 }
 
@@ -72,91 +72,13 @@ text-transform: uppercase;
 font-size: 65px;
 font-weight: 700;
 }
-.footer {
-display: flex;
-flex-flow: row wrap;
-padding: 50px;
-color: #fff;
-background-color: black;
-padding-bottom: 15px;
-}
-
-.footer > * {
-flex:  1 100%;
-}
-
-.l-footer {
-margin-right: 1.25em;
-margin-bottom: 2em;
-}
 
 h2 {
 font-weight: 400;
 font-size: 15px;
 }
 
-.footer ul {
-list-style: none;
-padding-left: 0;
-}
 
-.footer li {
-line-height: 2em;
-margin-right: 10px;
-}
-
-.footer a {
-text-decoration: none;
-}
-
-.r-footer {
-display: flex;
-flex-flow: row wrap;
-}
-
-.r-footer > * {
-flex: 1 50%;
-margin-right: 1.25em;
-}
-
-.box a {
-color: #999;
-
-}
-
-.h-box {
-column-count: 2;
-column-gap: 1.25em;
-}
-
-.b-footer {
-text-align: center;
-color: #999;
-padding-top: 50px;
-}
-
-.l-footer p {
-padding-right: 20%;
-color: #999;
-}   
-
-@media screen and (min-width: 600px) {
-.r-footer > * {
-flex: 1;
-}
-
-.features {
-flex-grow: 2;
-}
-
-.l-footer {
-flex: 1 0px;
-}
-
-.r-footer {
-flex: 2 0px;
-}
-}
 
     </style>
 
@@ -183,15 +105,20 @@ flex: 2 0px;
           <a class="nav-link" href="service.php">Service</a>
         </li>
         <li class="nav-item mx-3">
+          <a class="nav-link" href="produk.php">Produk</a>
+        </li>
+        <li class="nav-item mx-3">
           <a class="nav-link" href="faq.php">FAQ</a>
         </li>
           </a>
         </li>
       </ul>
-      <form class="d-flex">
+      
         
-        <a class="btn btn-outline-warning" href="login.php" role="button">Login</a>
-      </form>
+        <a class="btn btn-outline-warning me-2" href="login.php" role="button">Login</a>
+        
+     
+    
     </div>
   </div>
 </nav>
@@ -255,47 +182,65 @@ document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+
 </script>
 <br>
 
-<footer class="footer">
-<div class="l-footer">
-      <h1>
-      <img src="image/logo.png" width="48" alt=""></h1>
-      <p>
-      Mozalucky Barbershop adalah sebuah perusahaan yang bergerak di bidang jasa dan beroperasi sejak 2018. lets explore your hair style with Mozalucky Barbershop.</p>
-      </div>
-      <ul class="r-footer">
-      <li>
-        <h2>
-      Follow us</h2>
-      <ul class="box">
-      <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-  	 	<li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-  	 	<li><a href="https://www.instagram.com/mosalaki_barber/"><i class="fab fa-instagram"></i>Instagram</a></li>
-      </ul>
-      </li>
-      <li class="features">
-        <h2>
-      Information</h2>
-      <ul class="box h-box">
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Membership</a></li>
-      <li><a href="#">Customer Service</a></li>
-      </ul>
-      </li>
-      <li>
-        <h2>
-      Legal</h2>
-      <ul class="box">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contract</a></li>
-      </ul>
-      </li>
-      </ul>
-      <div class="b-footer">
-      <p>
-      All rights reserved by ©admin MozaluckyBarbershop </p>
-      </div>
-</footer>
+<footer class="section bg-footer">  
+     <div class="container">  
+       <div class="row">  
+         <div class="col-lg-3">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Information</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <li><a href="">Pages</a></li>  
+               <!-- <li><a href="">Our Team</a></li>   -->
+               <!-- <li><a href="">Feuchers</a></li>   -->
+               <li><a href="service.php">Pricing</a></li>  
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-3">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Ressources</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <!-- <li><a href="">Monitoring Grader </a></li>   -->
+               <li><a href="https://www.tiktok.com/@mozaluckybarbershop?_d=secCgYIASAHKAESPgo85HC6W%2FzwXUfm7lpkT8t2noIrbROdY4lnGNi5YZoUQYKZik%2BXBWvX0ajBHSKxTkr0JkSFm%2BwdVe%2FYaJFBGgA%3D&_r=1&language=id&sec_uid=MS4wLjABAAAAKboRBDfNiefWrDKYdQsylTvIdDw1YNkbeUXH-VPi_JpQNyZnU17_0vd-cqxIUNJO&sec_user_id=MS4wLjABAAAAbqQWAd_g_jEpDXNeezbOhEZ_rao3xoRVEo2c3Z2l7pkudn-2CZifrsLKgZW3dQ4F&share_app_id=1180&share_author_id=6915229516315476993&share_link_id=8e16736f-d244-4835-a7a3-034a701a9108&source=h5_t&timestamp=1657334690&u_code=dkg32m95ggk38a&ug_btm=b9734%2Cb2878&ugbiz_name=Account&user_id=7006139786113057819&utm_campaign=client_share&utm_medium=android&utm_source=copy">Video </a></li>  
+               <li><a href="terms.php">Term &amp; Service</a></li>  
+               <!-- <li><a href="">Zeeko API</a></li>   -->
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-2">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Help</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <li><a href="daftar.php">Sign Up </a></li>  
+               <li><a href="login.php">Login</a></li>  
+               <!-- <li><a href="">Terms of Services</a></li>   -->
+               <li><a href="privacy.php">Privacy Policy</a></li>  
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-4">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Contact Us</h5>  
+             <p class="contact-info mt-4">Contact us if need help withanything</p>  
+             <p class="contact-info">+62 822 3089 2356</p>  
+             <div class="mt-5">  
+               <ul class="list-inline">  
+                 <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>  
+                 <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>  
+
+ 
+
+                 <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>  
+                 <li class="list-inline-item"><a href="#"><i class="fab apple footer-social-icon fa-apple"></i></i></a></li>  
+               </ul>  
+             </div>  
+           </div>  
+         </div>  
+       </div>  
+     </div>  
+     <div class="text-center mt-5">  
+       <p class="footer-alt mb-0 f-14">2022 © Mozalucky Barbershop, All Rights Reserved</p>  
+     </div>  
+   </footer>  
   </body>
 </html>

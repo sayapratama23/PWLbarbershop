@@ -13,7 +13,7 @@ if(isset($_POST['daftar'])){
 
     // buat query
     $sql = "INSERT INTO pelanggan (nama, hp, alamat, tagihan) VALUE ('$nama', '$hp', '$alamat', '$tagihan')";
-    $query = mysqli_query($db, $sql);
+    $query = mysqli_query($con, $sql);
 
     // apakah query simpan berhasil?
     if( $query ) {

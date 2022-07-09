@@ -3,7 +3,7 @@ session_start(); // Start session nya
 // Kita cek apakah user sudah login atau belum
 // Cek nya dengan cara cek apakah terdapat session username atau tidak
 if(isset($_SESSION['username'])){ // Jika session username ada berarti dia sudah login
-  header('location: member/member.php'); // Kita Redirect ke halaman welcome.php
+  header('location: login.php'); // Kita Redirect ke halaman login.php
 }
 ?>
 <!DOCTYPE html>

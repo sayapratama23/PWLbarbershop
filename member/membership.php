@@ -85,6 +85,7 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
                         </div>
                     </div>
                     <a href="tagihan.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Tagihan</a>
+                    <a href="images.php" class="nav-item nav-link"><i class="bi bi-images me-2"></i>Galeri</a>
                     <a href="store.php" class="nav-item nav-link"><i class="bi bi-shop me-2"></i></i>Mozalucky store</a>
                 </div>
             </nav>

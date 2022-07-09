@@ -80,11 +80,12 @@ if( ! isset($_SESSION['username'])){ // Jika tidak ada session username berarti 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-laptop me-2"></i>Layanan Anda</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="membership.php" class="dropdown-item ms-4">Membership</a>
+                            
                             <a href="booking.php" class="dropdown-item ms-4">Booking</a>
                         </div>
                     </div>
                     <a href="tagihan.php" class="nav-item nav-link active"><i class="bi bi-receipt me-2"></i>Tagihan</a>
+                    <a href="images.php" class="nav-item nav-link"><i class="bi bi-images me-2"></i>Galeri</a>
                     <a href="store.php" class="nav-item nav-link "><i class="bi bi-shop me-2"></i></i>Mozalucky store</a>
                 </div>
             </nav>

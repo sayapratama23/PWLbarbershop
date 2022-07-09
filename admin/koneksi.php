@@ -1,13 +1,12 @@
 <?php
-
-$server = "localhost";
+$host = "localhost";
 $user = "root";
-$password = "";
-$nama_database = "barbershop";
+$pass = "";
+$db = "barbershop";
 
-$db = mysqli_connect($server, $user, $password, $nama_database);
+$con = mysqli_connect($host, $user, $pass, $db);
 
-if( !$db ){
+if( !$con ){
     die("Gagal terhubung dengan database: " . mysqli_connect_error());
 }
 

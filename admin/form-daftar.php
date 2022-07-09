@@ -303,7 +303,7 @@ if($_SESSION['level']==""){
                   <tbody>
                     <?php
                         $sql = "SELECT * FROM pelanggan";
-                        $query = mysqli_query($db, $sql);
+                        $query = mysqli_query($con, $sql);
                         
 
                         while($pelanggan = mysqli_fetch_array($query)){

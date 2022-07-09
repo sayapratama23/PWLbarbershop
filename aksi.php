@@ -34,7 +34,7 @@ if($cek > 0){
 		$_SESSION['email'] = $data['email'];
 		
 		// berfungsi mengalihkan ke halaman moderator
-		header("location:member.php");
+		header("location:member/member.php");
 
 	}else{
 		// berfungsi mengalihkan  ke halaman login kembali

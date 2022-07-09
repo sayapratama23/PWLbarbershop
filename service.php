@@ -16,7 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">  
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">  
+    <link rel="stylesheet" href="footer.css">    
+</head>
     <style>
         body {
           height: 90vh;
@@ -33,10 +36,11 @@
             margin-top: 20px;
             margin-bottom: 20px;
             margin-right: 15px;
+           
              
         }
 
-        .container {
+        .kotak {
         border: solid;
         color: black;
         background-color: white;  
@@ -47,12 +51,15 @@
         .table {
             font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
             color: black;
+            background-color: white; 
+            /* margin-left: 50px;
+            padding-left: 50px; */
         }
 
-        body {
-margin: 0;
-display: grid;
-}
+        /* body {
+        margin: 0;
+        display: grid;
+        } */
 header p {
 padding: 50px;
 text-align: center;
@@ -60,91 +67,6 @@ color: #bebebe;
 text-transform: uppercase;
 font-size: 65px;
 font-weight: 700;
-}
-.footer {
-display: flex;
-flex-flow: row wrap;
-padding: 50px;
-color: #fff;
-background-color: black;
-padding-bottom: 15px;
-}
-
-.footer > * {
-flex:  1 100%;
-}
-
-.l-footer {
-margin-right: 1.25em;
-margin-bottom: 2em;
-}
-
-h2 {
-font-weight: 400;
-font-size: 15px;
-}
-
-.footer ul {
-list-style: none;
-padding-left: 0;
-}
-
-.footer li {
-line-height: 2em;
-margin-right: 10px;
-}
-
-.footer a {
-text-decoration: none;
-}
-
-.r-footer {
-display: flex;
-flex-flow: row wrap;
-}
-
-.r-footer > * {
-flex: 1 50%;
-margin-right: 1.25em;
-}
-
-.box a {
-color: #999;
-
-}
-
-.h-box {
-column-count: 2;
-column-gap: 1.25em;
-}
-
-.b-footer {
-text-align: center;
-color: #999;
-padding-top: 50px;
-}
-
-.l-footer p {
-padding-right: 20%;
-color: #999;
-}   
-
-@media screen and (min-width: 600px) {
-.r-footer > * {
-flex: 1;
-}
-
-.features {
-flex-grow: 2;
-}
-
-.l-footer {
-flex: 1 0px;
-}
-
-.r-footer {
-flex: 2 0px;
-}
 }
 
     </style>
@@ -173,6 +95,9 @@ flex: 2 0px;
                 <a class="nav-link active" href="service.php">Service</a>
                 </li>
                 <li class="nav-item mx-3">
+                <a class="nav-link" href="produk.php">Produk</a>
+                </li>
+                <li class="nav-item mx-3">
                 <a class="nav-link" href="faq.php">FAQ</a>
                 </li>
                 </a>
@@ -189,8 +114,8 @@ flex: 2 0px;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <body> 
  
-        <div class="container">		
-			<h4><strong>SERVICE  &  PRICE</strong> </h4>
+        <div class="container">
+			<h4 class="text-white mt-4"><strong>SERVICE  &  PRICE</strong> </h4>
             <hr>
 		<table class="table table-bordered">
 	<thead>
@@ -265,54 +190,70 @@ flex: 2 0px;
 <table class="table table-bordered table-striped">
  
 	
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.227765406002!2d112.60610471432845!3d-7.9753959817163675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78829a80cd3feb%3A0x88673c2e07a69788!2sJl.%20Pisang%20Candi%20Barat%20No.73%2C%20Pisang%20Candi%2C%20Kec.%20Sukun%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065146!5e0!3m2!1sid!2sid!4v1649743057096!5m2!1sid!2sid" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 	<script src="assets/js/jquery.js"></script> 
 	<script src="assets/js/popper.js"></script> 
 	<script src="assets/js/bootstrap.js"></script>
 
-    <footer class="footer">
-<div class="l-footer">
-      <h1>
-      <img src="image/logo.png" width="48" alt=""></h1>
-      <p>
-      Mozalucky Barbershop adalah sebuah perusahaan yang bergerak di bidang jasa dan beroperasi sejak 2018. lets explore your hair style with Mozalucky Barbershop.</p>
-      </div>
-      <ul class="r-footer">
-      <li>
-        <h2>
-      Follow us</h2>
-      <ul class="box">
-      <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-  	 	<li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
-  	 	<li><a href="https://www.instagram.com/mosalaki_barber/"><i class="fab fa-instagram"></i>Instagram</a></li>
-      </ul>
-      </li>
-      <li class="features">
-        <h2>
-      Information</h2>
-      <ul class="box h-box">
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Membership</a></li>
-      <li><a href="#">Customer Service</a></li>
-      </ul>
-      </li>
-      <li>
-        <h2>
-      Legal</h2>
-      <ul class="box">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contract</a></li>
-      </ul>
-      </li>
-      </ul>
-      
-      <div class="b-footer">
-      <p>
-      All rights reserved by ©admin MozaluckyBarbershop </p>
-      </div>
-      
-</footer>
+    <footer class="section bg-footer">  
+     <div class="container">  
+       <div class="row">  
+         <div class="col-lg-3">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Information</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <li><a href="">Pages</a></li>  
+               <li><a href="">Our Team</a></li>  
+               <li><a href="">Feuchers</a></li>  
+               <li><a href="">Pricing</a></li>  
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-3">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Ressources</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <li><a href="">Monitoring Grader </a></li>  
+               <li><a href="">Video Tutorial</a></li>  
+               <li><a href="">Term &amp; Service</a></li>  
+               <li><a href="">Zeeko API</a></li>  
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-2">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Help</h5>  
+             <ul class="list-unstyled footer-link mt-4">  
+               <li><a href="">Sign Up </a></li>  
+               <li><a href="">Login</a></li>  
+               <li><a href="">Terms of Services</a></li>  
+               <li><a href="">Privacy Policy</a></li>  
+             </ul>  
+           </div>  
+         </div>  
+         <div class="col-lg-4">  
+           <div class="">  
+             <h5 class="footer-heading text-uppercase text-white">Contact Us</h5>  
+             <p class="contact-info mt-4">Contact us if need help withanything</p>  
+             <p class="contact-info">+01 123-456-7890</p>  
+             <div class="mt-5">  
+               <ul class="list-inline">  
+                 <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>  
+                 <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>  
+
+ 
+
+                 <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>  
+                 <li class="list-inline-item"><a href="#"><i class="fab apple footer-social-icon fa-apple"></i></i></a></li>  
+               </ul>  
+             </div>  
+           </div>  
+         </div>  
+       </div>  
+     </div>  
+     <div class="text-center mt-5">  
+       <p class="footer-alt mb-0 f-14">2022 © Mozalucky Barbershop, All Rights Reserved</p>  
+     </div>  
+   </footer>
 </body> 
 </html>
